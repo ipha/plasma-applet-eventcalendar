@@ -177,7 +177,7 @@ Item {
 
 		Connections {
 			target: timeModel
-			onDateChanged: {
+			function onDateChanged() {
 				popup.updateToday()
 				logger.debug('root.onDateChanged', timeModel.currentTime, popup.today)
 			}

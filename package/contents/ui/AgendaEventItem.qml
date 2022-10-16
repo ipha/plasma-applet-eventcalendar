@@ -25,8 +25,8 @@ LinkRect {
 	}
 	Connections {
 		target: timeModel
-		onLoaded: agendaEventItem.checkIfInProgress()
-		onMinuteChanged: agendaEventItem.checkIfInProgress()
+		function onLoaded() { agendaEventItem.checkIfInProgress() }
+		function onMinuteChanged() { agendaEventItem.checkIfInProgress() }
 	}
 	Component.onCompleted: {
 		agendaEventItem.checkIfInProgress()

@@ -34,7 +34,7 @@ Dialog {
 	Connections {
 		target: tableView.selection
 		
-		onSelectionChanged: {
+		function onSelectionChanged() {
 			tableView.selection.forEach(function(row) {
 				var city = filteredCityListModel.get(row)
 				chooseCityDialog.selectedCityId = city.id
@@ -45,7 +45,7 @@ Dialog {
 	Connections {
 		target: filteredCityListModel
 		
-		onFilterRegExpChanged: {
+		function onFilterRegExpChanged() {
 			tableView.selection.clear()
 			chooseCityDialog.selectedCityId = ''
 		}

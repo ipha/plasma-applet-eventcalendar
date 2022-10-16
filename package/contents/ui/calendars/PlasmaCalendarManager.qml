@@ -106,7 +106,7 @@ CalendarManager {
 	}
 	Connections {
 		target: plasmoid.configuration
-		onEnabledCalendarPluginsChanged: {
+		function onEnabledCalendarPluginsChanged() {
 			PlasmaCalendarUtils.setEnabledPluginsByFilename(PlasmaCalendar.EventPluginsManager, plasmoid.configuration.enabledCalendarPlugins)
 		}
 	}
